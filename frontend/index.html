@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Network Wallet Recovery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Multi-Network Wallet Recovery Tool</h1>
+        
+        <div class="card">
+            <h2>Generate New Mnemonic</h2>
+            <button id="generateBtn">Generate</button>
+            <div id="generatedMnemonic" class="mnemonic-display"></div>
+        </div>
+
+        <div class="card">
+            <h2>Recover Wallet</h2>
+            <textarea id="mnemonicInput" placeholder="Enter your 12-word mnemonic phrase"></textarea>
+            
+            <div class="network-select" id="networkSelect">
+                <!-- Networks will be populated dynamically -->
+            </div>
+            
+            <textarea id="pathsInput" placeholder="Enter custom derivation paths (optional, one per line)&#10;Example:&#10;m/44'/0'/0'/0/0&#10;m/44'/0'/0'/0/1"></textarea>
+            
+            <button id="recoverBtn">Recover Wallet</button>
+            <div id="walletInfo" class="wallet-info"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
